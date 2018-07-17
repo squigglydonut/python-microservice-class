@@ -13,7 +13,7 @@ def get_temperature():
 @app.route('/')
 def index():
   temp = get_temperature()
-  return render_template('index.html')
+  return render_template('index.html', temp = temp)
 
 if __name__ == '__main__':
   app.run(debug=True)
